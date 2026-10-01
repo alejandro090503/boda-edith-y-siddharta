@@ -1016,6 +1016,21 @@ body{
 @media (prefers-reduced-motion:reduce){
   .satin::before,.metal,.btn-map,.rsvp-btn,.btn-cal,.cd-box,.loc-card,.dc-col,.album-qr-wrap,.loc-cal-divider,.footer-hr,.nk-line{animation:none}
 }
+
+/* ── DRESS CODE (diseño de boda-fabiola-y-fernando) ── */
+#dresscode .dc-note{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;font-style:italic;color:var(--text);margin:0 0 34px}
+.dc-figures{display:flex;align-items:center;justify-content:center;gap:30px;margin:6px auto 28px;max-width:380px}
+.dc-fig{display:flex;flex-direction:column;align-items:center;gap:14px;flex:1}
+.dc-fig img{height:clamp(200px,56vw,240px);width:auto;display:block;filter:drop-shadow(0 6px 14px rgba(53,42,61,.22))}
+.dc-fig-label{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;font-style:italic;letter-spacing:1px;color:var(--dark)}
+.dc-fig-sub{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text);margin-top:-8px}
+.dc-sep-line{width:1.5px;align-self:stretch;min-height:118px;background:linear-gradient(180deg,transparent,#9a9aa6 18%,#c9a977 50%,#825cb8 82%,transparent)}
+.dc-avoid-block{margin-top:8px}
+#dresscode .dc-avoid{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:18px;color:var(--text);margin:0}
+#dresscode .dc-swatches{display:inline-flex;gap:18px;justify-content:center;align-items:center;margin:16px auto 0}
+.dc-swatch-dot{width:28px;height:28px;border-radius:50%;display:inline-block;box-shadow:0 4px 14px rgba(53,42,61,.18);position:relative}
+.dc-swatch-dot::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px dashed rgba(53,42,61,.35);pointer-events:none}
+.dc-avoid-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#6d48a6;margin-top:12px}
 </style>
 </head>
 <body>
@@ -1391,36 +1406,32 @@ body{
 
   <!-- ── 12. DRESS CODE ── -->
   <section id="dresscode" class="sec sec--surface">
-    <p class="eyebrow rv">Etiqueta</p>
-    <h2 class="script-title metal rv">Dress Code</h2>
-    <p class="dc-subtitle rv">Semiformal</p>
-    <p class="dc-note rv">¡Queremos que se sientan cómodos y elegantes!</p>
+    <p class="eyebrow rv">Código de vestimenta</p>
+    <h2 class="script-title metal rv">Semiformal</h2>
+    <div class="nk-line rv"></div>
+    <p class="dc-note rv">Acompáñanos vestido para la ocasión</p>
 
-    <div class="dc-cols">
-      <div class="dc-col rv">
-        <div class="dc-col-ttl">Para Ellas</div>
-        <ul class="dc-list">
-          <li>Vestidos de cóctel o largos</li>
-          <li>Encaje, chifón o estampados sutiles</li>
-          <li>Zapato de tacón o plataforma</li>
-        </ul>
+    <div class="dc-figures rv">
+      <div class="dc-fig">
+        <img src="caballero.png" alt="Caballero, vestimenta semiformal">
+        <span class="dc-fig-label">Caballeros</span>
+        <span class="dc-fig-sub">semiformal</span>
       </div>
-      <div class="dc-col rv">
-        <div class="dc-col-ttl">Para Ellos</div>
-        <ul class="dc-list">
-          <li>Traje o pantalón y saco</li>
-          <li>Corbata opcional</li>
-          <li>Camisa de vestir</li>
-          <li>Mocasines o zapatos de vestir</li>
-        </ul>
+      <div class="dc-sep-line" aria-hidden="true"></div>
+      <div class="dc-fig">
+        <img src="dama.png" alt="Dama, vestido semiformal">
+        <span class="dc-fig-label">Damas</span>
+        <span class="dc-fig-sub">vestido</span>
       </div>
     </div>
 
-    <div class="dc-figs rv" id="dcFigs"><img src="caballero.png" alt="Caballero: vestimenta semiformal" loading="lazy"><img src="dama.png" alt="Dama: vestimenta semiformal" loading="lazy"></div>
-
-    <p class="dc-avoid rv">Evitar: Blanco &mdash; reservado para la novia</p>
-
-    
+    <div class="dc-avoid-block rv">
+      <p class="dc-avoid">Por favor evitar este color</p>
+      <div class="dc-swatches">
+        <span class="dc-swatch-dot" style="background:#FFFFFF;border:1.5px solid rgba(53,42,61,.35);" aria-label="Blanco"></span>
+      </div>
+      <p class="dc-avoid-name">Blanco &mdash; reservado para la novia</p>
+    </div>
   </section>
 
   <!-- ── SOLO ADULTOS ── -->
