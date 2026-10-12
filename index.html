@@ -1031,6 +1031,24 @@ body{
 .dc-swatch-dot{width:28px;height:28px;border-radius:50%;display:inline-block;box-shadow:0 4px 14px rgba(53,42,61,.18);position:relative}
 .dc-swatch-dot::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px dashed rgba(53,42,61,.35);pointer-events:none}
 .dc-avoid-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#6d48a6;margin-top:12px}
+.hero-bride.metal{font-size:clamp(52px,15.5vw,80px);white-space:nowrap}
+
+/* ── v3 ── */
+.fam-hijos{margin:16px auto 0;max-width:340px;padding:20px 12px;border-radius:16px;border:1.5px solid transparent;
+  background:linear-gradient(rgba(255,255,255,.82),rgba(255,255,255,.82)) padding-box,var(--plata) border-box}
+.pad-list{display:flex;flex-direction:column;gap:18px;max-width:340px;margin:0 auto}
+.pad-row{display:flex;flex-direction:column;align-items:center}
+.pad-row .pad-role{margin-bottom:4px}
+.nk-no{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:22px;letter-spacing:5px;text-transform:uppercase;color:#6d48a6;margin:4px 0 22px}
+.nk-card{max-width:380px;margin:0 auto;border-radius:20px;padding:34px 26px;text-align:center;
+  border:1.5px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--champan) border-box;
+  box-shadow:0 6px 36px rgba(53,42,61,.08)}
+.nk-icon{width:56px;height:56px;margin:0 auto 18px;border-radius:50%;background:rgba(130,92,184,.07);
+  display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(130,92,184,.25)}
+.nk-icon svg{color:#825cb8}
+.nk-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;font-weight:600;color:var(--text);line-height:1.6}
+.gal-slide img.gal-full{object-fit:contain;object-position:center}
+.gal-slide:has(.gal-full){background:#2b2233}
 </style>
 </head>
 <body>
@@ -1067,9 +1085,9 @@ body{
     <div class="hero-bg"></div>
     <div class="hero-veil"></div>
     <div class="hero-content">
-      <span class="hero-bride metal rv">Edith</span>
+      <span class="hero-bride metal rv">Siddharta Omar</span>
       <span class="hero-amp rv">&amp;</span>
-      <span class="hero-groom metal rv">Siddharta</span>
+      <span class="hero-groom metal rv">Edith</span>
     </div>
     <div class="scroll-hint" id="scrollHint">
       <span class="scroll-hint-txt">Desliza</span>
@@ -1168,10 +1186,7 @@ body{
   <!-- ── 6. FRASE ROMÁNTICA ── -->
   <section id="quote" class="sec sec--surface">
     <p class="quote-txt rv">
-      &ldquo;Llevamos más de quince años de relación y de vida juntos,
-      con altas y con bajas, como todas las parejas.
-      Para fortalecer aún más nuestro vínculo, decidimos unir nuestras vidas
-      con la bendición de Dios.&rdquo;
+      &ldquo;Lo que comenzó hace 16 años, con un café y un abrazo, se convirtió en una linda historia de amor, risas, algunas lágrimas, comprensión y aceptación. Por ello hemos decidido unir nuestras vidas con la bendición de Dios.&rdquo;
     </p>
     <span class="quote-sig metal rv">Siddharta &amp; Edith</span>
   </section>
@@ -1208,8 +1223,7 @@ body{
 
   <!-- ── FAMILIA ── -->
   <section id="familia" class="sec satin satin--champ">
-    <p class="eyebrow rv">Con la bendición de Dios y de nuestros padres</p>
-    <h2 class="script-title metal rv">Nuestra Familia</h2>
+        <h2 class="script-title metal rv">Nuestra Familia</h2>
 
     <div class="fam-cols">
       <div class="fam-col rv">
@@ -1224,14 +1238,24 @@ body{
       </div>
     </div>
 
+        <div class="fam-hijos rv">
+      <div class="fam-role">Hijos</div>
+      <div class="fam-name">Irving E. Barraza</div>
+      <div class="fam-name">Isaac E. Barraza</div>
+      <div class="fam-name">Ivan E. Barraza</div>
+      <div class="fam-name">Ingrid E. Barraza</div>
+      <div class="fam-name">Santiago Baca</div>
+      <div class="fam-name">Karen M. Baca</div>
+      <div class="fam-name">Idaly E. Barraza</div>
+    </div>
+
     <div class="nk-line rv"></div>
     <p class="fam-sub rv">Nuestros Padrinos</p>
-    <div class="pad-stage rv" id="padStage" aria-live="polite">
-      <div class="pad-item on"><span class="pad-role">Padrinos de Lazo</span><span class="pad-name">Arturo y Jannet Cervantes</span></div>
-      <div class="pad-item"><span class="pad-role">Padrinos de Anillos</span><span class="pad-name">Julio y Evangelina Luna</span></div>
-      <div class="pad-item"><span class="pad-role">Madrina de Arras</span><span class="pad-name">Martha Portillo</span></div>
+    <div class="pad-list">
+      <div class="pad-row rv"><span class="pad-role">Padrinos de Lazo</span><span class="pad-name">Arturo y Jannet Cervantes</span></div>
+      <div class="pad-row rv"><span class="pad-role">Padrinos de Anillos</span><span class="pad-name">Julio y Evangelina Luna</span></div>
+      <div class="pad-row rv"><span class="pad-role">Madrina de Arras</span><span class="pad-name">Martha Portillo</span></div>
     </div>
-    <div class="pad-dots" id="padDots"><i class="on"></i><i></i><i></i></div>
 
     <div class="nk-line rv"></div>
     <p class="fam-sub rv">Corte de Honor</p>
@@ -1409,21 +1433,6 @@ body{
     <p class="eyebrow rv">Código de vestimenta</p>
     <h2 class="script-title metal rv">Semiformal</h2>
     <div class="nk-line rv"></div>
-    <p class="dc-note rv">Acompáñanos vestido para la ocasión</p>
-
-    <div class="dc-figures rv">
-      <div class="dc-fig">
-        <img src="caballero.png" alt="Caballero, vestimenta semiformal">
-        <span class="dc-fig-label">Caballeros</span>
-        <span class="dc-fig-sub">semiformal</span>
-      </div>
-      <div class="dc-sep-line" aria-hidden="true"></div>
-      <div class="dc-fig">
-        <img src="dama.png" alt="Dama, vestido semiformal">
-        <span class="dc-fig-label">Damas</span>
-        <span class="dc-fig-sub">vestido</span>
-      </div>
-    </div>
 
     <div class="dc-avoid-block rv">
       <p class="dc-avoid">Por favor evitar este color</p>
@@ -1436,11 +1445,14 @@ body{
 
   <!-- ── SOLO ADULTOS ── -->
   <section id="nokids" class="sec satin satin--champ">
-    <p class="eyebrow rv">Con todo nuestro cariño</p>
-    <h2 class="script-title metal rv">Una Noche para los Grandes</h2>
-    <div class="nk-line rv"></div>
-    <p class="nk-txt rv">Queremos mucho a los pequeños de cada familia. En esta ocasión soñamos con una celebración tranquila, pensada solo para adultos, para que ustedes puedan relajarse y disfrutar con nosotros cada momento.</p>
-    <p class="nk-txt nk-txt--s rv">Gracias de corazón por su comprensión.</p>
+    <h2 class="script-title metal rv">Evento Solo Adultos</h2>
+    <p class="nk-no rv">No Niños</p>
+    <div class="nk-card rv">
+      <div class="nk-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+      </div>
+      <p class="nk-text">Agradecemos su comprensión.</p>
+    </div>
   </section>
 
   <div class="ornament rv">
@@ -1487,7 +1499,7 @@ body{
           <div class="gal-vignette"></div>
         </div>
         <div class="gal-slide">
-          <img src="foto3.jpg" alt="Edith &amp; Siddharta">
+          <img src="foto3.jpg" alt="Edith &amp; Siddharta" class="gal-full" style="--src:url(foto3.jpg)">
           <div class="gal-vignette"></div>
         </div>
         <div class="gal-slide">
@@ -1635,8 +1647,8 @@ body{
           </svg>
 
           <div class="eyebrow rsvp-eyebrow">Confirma tu Asistencia</div>
-          <h2 class="rsvp-title">Tu presencia <em>lo es</em> todo</h2>
-          <p class="rsvp-text">Por favor confírmanos tu asistencia antes del <strong>20 de noviembre de 2026</strong>. Nos hará muy felices saber que estarás con nosotros.</p>
+          
+          <p class="rsvp-text">Por favor confírmanos tu asistencia antes del <strong>20 de noviembre de 2026</strong>.<br>Te lo agradecemos.</p>
 
           <p id="rsvp-name-display" style="display:none;font-family:'Great Vibes',cursive;font-size:clamp(30px,7vw,44px);color:var(--gold-deep);line-height:1.2;margin:18px auto 4px;"></p>
 
@@ -1674,7 +1686,7 @@ body{
 
   <!-- ── 16. FOOTER ── -->
   <footer id="footer" class="satin satin--champ">
-    <div class="footer-names metal rv">Edith &amp; Siddharta</div>
+    <div class="footer-names metal rv">Siddharta Omar &amp; Edith</div>
     <div class="footer-date rv">5 &middot; Diciembre &middot; 2026</div>
     <div class="footer-hr"></div>
     <a href="https://www.instagram.com/elysium.invitaciones" target="_blank" rel="noopener" class="footer-credit">@elysium.invitaciones</a>
