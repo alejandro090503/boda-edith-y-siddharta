@@ -1015,6 +1015,17 @@ body{
 #rsvp .rsvp-btn{font-size:16px;letter-spacing:.18em;cursor:pointer}
 #rsvp .rsvp-deadline{font-size:14px;letter-spacing:.14em;font-weight:700;color:#6d48a6}
 #rsvp #rsvp-feedback{font-style:normal;font-weight:600}
+/* Los avisos (nombres faltantes, un nombre por campo, errores) solo se ven si hay texto */
+#rsvp #rsvp-feedback:not(:empty){display:block}
+/* Nombre de la invitación: grande, lavanda con brillo plateado suave */
+.rsvp-para{margin:22px auto 6px;text-align:center}
+.rsvp-para-lbl{display:block;font-family:var(--serif);font-size:13px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:#6d48a6;margin-bottom:6px}
+.rsvp-para-nombre{display:inline-block;font-family:'Great Vibes',cursive;font-size:clamp(42px,11.5vw,58px);line-height:1.15;padding:.08em .22em;
+  background:linear-gradient(100deg,#5a3a8f 0%,#825cb8 30%,#c9b4ec 46%,#ffffff 50%,#c9b4ec 54%,#825cb8 70%,#5a3a8f 100%);background-size:260% 100%;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#6d48a6;
+  filter:drop-shadow(0 1px 1px rgba(255,255,255,.9)) drop-shadow(0 2px 12px rgba(153,90,230,.28));
+  animation:metalSweep 7s linear infinite}
+@media (prefers-reduced-motion:reduce){.rsvp-para-nombre{animation:none;background-position:50% 50%}}
 #rsvp .rsvp-input.rsvp-input-falta{border-color:#a3311f;box-shadow:0 0 0 3px rgba(163,49,31,.14)}
 .rsvp-contador-wrap{display:none;max-width:420px;margin:0 auto 20px;text-align:center}
 .rsvp-contador-nota{font-family:var(--serif);font-style:italic;font-size:18px;font-weight:500;line-height:1.5;color:var(--ink);margin:0 auto 12px}
@@ -1680,7 +1691,10 @@ body{
           
           <p class="rsvp-text">Por favor confírmanos tu asistencia antes del <strong>20 de noviembre de 2026</strong>.<br>Te lo agradecemos.</p>
 
-          <p id="rsvp-name-display" style="display:none;font-family:'Great Vibes',cursive;font-size:clamp(30px,7vw,44px);color:var(--gold-deep);line-height:1.2;margin:18px auto 4px;"></p>
+          <div id="rsvpParaNote" class="rsvp-para" style="display:none">
+            <span class="rsvp-para-lbl">Esta invitación es para</span>
+            <span class="rsvp-para-nombre" id="rsvpParaNombre"></span>
+          </div>
 
           <div class="rsvp-divider">
             <svg class="rsvp-divider-heart" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
@@ -2066,6 +2080,8 @@ function initRSVP(){
       'Esta invitación es para ' + urlPara + '.',
       'This invitation is for ' + urlPara + '.');
     noteEl.style.display = 'block';
+    var paraEl = document.getElementById('rsvpParaNote'), nomEl = document.getElementById('rsvpParaNombre');
+    if(paraEl && nomEl){ nomEl.textContent = urlPara; paraEl.style.display = 'block'; noteEl.style.display = 'none'; }
   }
 
   function renderFields(n){
